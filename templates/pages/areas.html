@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import cta_band %}
+{% block main %}
+<section class="page-hero">
+  <div class="wrap narrow">
+    <p class="eyebrow">Areas we cover</p>
+      <h1>Areas we cover</h1>
+    <p class="lede">We come to your home or workplace across {{ site.area_summary }}. We can bring our own water and power, so all we need is space to work around the car.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap narrow">
+    <h2>Towns we cover</h2>
+    {% for a in site.areas %}
+    <h3>{{ a.name }}</h3>
+    <ul class="town-list">{% for t in a.towns %}<li>{{ t }}</li>{% endfor %}</ul>
+    {% endfor %}
+    <h2>Not sure if we cover you?</h2>
+    <p>If you're near one of these areas but not listed, send us your postcode and we'll let you know.</p>
+    <a class="btn btn-whatsapp" href="{{ wa("Hi, do you cover my postcode? It's [postcode].") }}" data-track="whatsapp_click" data-label="areas">Check your postcode on WhatsApp</a>
+  </div>
+</section>
+{{ cta_band("Get a quote", "Tell us the car and your postcode, and we'll confirm the price and a time.") }}
+{% endblock %}

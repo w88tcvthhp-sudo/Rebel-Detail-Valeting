@@ -1,0 +1,166 @@
+[
+  {
+    "id": "water",
+    "tags": [
+      "home",
+      "valeting",
+      "faq"
+    ],
+    "section": "Your appointment",
+    "q": "Do you need water or electricity from me?",
+    "a": "No. We can bring our own water and power, so we don't need anything from you. All we need is space to work around the car."
+  },
+  {
+    "id": "rain",
+    "tags": [
+      "home",
+      "valeting",
+      "faq"
+    ],
+    "section": "Your appointment",
+    "q": "What happens if it rains?",
+    "a": "Light rain doesn't stop us working. [[CONFIRM: what happens if the weather is too bad to work, e.g. how rebooking works.]]"
+  },
+  {
+    "id": "home",
+    "tags": [
+      "valeting",
+      "faq"
+    ],
+    "section": "Your appointment",
+    "q": "Do I need to be at home?",
+    "a": "No. As long as we can get to the car, you don't need to be in. We'll arrange access and keys with you when you book. If you are at home, Connor will walk round the car with you when it's finished."
+  },
+  {
+    "id": "where",
+    "tags": [
+      "faq"
+    ],
+    "section": "Your appointment",
+    "q": "Where can you valet my car?",
+    "a": "On your drive, outside your house, or at your workplace. [[CONFIRM: any limits, e.g. roadside parking, flats, underground car parks, needing the employer's permission.]]"
+  },
+  {
+    "id": "prepare",
+    "tags": [
+      "faq"
+    ],
+    "section": "Your appointment",
+    "q": "How should I get the car ready?",
+    "a": "Please take out any rubbish and personal items before we arrive. If you'd like child seats cleaned, let us know when you book."
+  },
+  {
+    "id": "time",
+    "tags": [
+      "home",
+      "faq"
+    ],
+    "section": "Packages and prices",
+    "q": "How long does a valet take?",
+    "a": "About 2 hours for a Mini Valet, about 3 hours for a Full Valet and about 4–6 hours for a Platinum Valet, depending on the car's size and condition."
+  },
+  {
+    "id": "choose",
+    "tags": [
+      "faq"
+    ],
+    "section": "Packages and prices",
+    "q": "Which valet should I choose?",
+    "a": "The Mini suits cars that are cleaned regularly. The Full is for cars with marked seats and carpets, or going back to a leasing company. The Platinum adds leather, the roof lining and the arches. If you're unsure, send us a few photos on WhatsApp. You can also <a href=\"/valeting/#compare\">compare all three valets</a>."
+  },
+  {
+    "id": "size",
+    "tags": [
+      "faq"
+    ],
+    "section": "Packages and prices",
+    "q": "Do larger vehicles cost more?",
+    "a": "[[CONFIRM: whether prices change for 4x4s and 7-seaters, and by how much.]] Vans and motorhomes are quoted individually."
+  },
+  {
+    "id": "vehicles",
+    "tags": [
+      "faq"
+    ],
+    "section": "Packages and prices",
+    "q": "What vehicles do you cover?",
+    "a": "Cars, vans and motorhomes. Vans and motorhomes are quoted individually, so send us the make and model."
+  },
+  {
+    "id": "pay",
+    "tags": [
+      "home",
+      "faq"
+    ],
+    "section": "Packages and prices",
+    "q": "How do I pay?",
+    "a": "We take card, cash or bank transfer."
+  },
+  {
+    "id": "handwash",
+    "tags": [
+      "faq"
+    ],
+    "section": "The work",
+    "q": "Is every car washed by hand?",
+    "a": "Yes. Every wash starts with a citrus pre-wash and snow foam to lift the worst of the dirt, followed by a hand contact wash and a hydrophobic rinse coating."
+  },
+  {
+    "id": "pethair",
+    "tags": [
+      "home",
+      "faq"
+    ],
+    "section": "The work",
+    "q": "Can you remove pet hair?",
+    "a": "Yes. See the <a href=\"/our-work/#ford-mondeo\">Ford Mondeo in our work</a>, where heavy pet hair was removed from the carpets and seats. Heavy pet hair can cost extra, so send us a photo and we'll confirm the price before you book."
+  },
+  {
+    "id": "stains",
+    "tags": [
+      "faq"
+    ],
+    "section": "The work",
+    "q": "Can you remove stains?",
+    "a": "Most everyday marks lift with the shampoo and extraction in the Full or Platinum Valet. Some stains, such as ink, dye transfer from clothing or very old marks, may only fade. We'll point out any stain that's unlikely to come out before we start."
+  },
+  {
+    "id": "childseats",
+    "tags": [
+      "valeting",
+      "faq"
+    ],
+    "section": "The work",
+    "q": "Do you clean child seats?",
+    "a": "Yes, if you ask. Let us know when you book and we'll include them."
+  },
+  {
+    "id": "valetvsdetail",
+    "tags": [
+      "valeting",
+      "faq"
+    ],
+    "section": "The work",
+    "q": "What's the difference between valeting and detailing?",
+    "a": "A valet cleans the car, inside and out. Detailing goes further and works on the paint itself, using machine polishing to reduce swirls and light scratches and coatings to protect it. If the paint looks dull or marked once it's clean, <a href=\"/detailing/\">detailing</a> is the next step."
+  },
+  {
+    "id": "travel",
+    "tags": [
+      "faq"
+    ],
+    "section": "Booking",
+    "q": "How far do you travel?",
+    "a": "We cover North Leeds, Aireborough, Shipley and Baildon, and Harrogate and Knaresborough. See the full list on our <a href=\"/areas/\">areas page</a>. If you're nearby but not listed, message us and we'll let you know."
+  },
+  {
+    "id": "book",
+    "tags": [
+      "home",
+      "faq"
+    ],
+    "section": "Booking",
+    "q": "How do I book?",
+    "a": "Use the <a href=\"/contact/\">quote form</a>, message us on WhatsApp or call 07469 184950. Tell us the car, your postcode and what it needs, and we'll confirm the price and a time."
+  }
+]

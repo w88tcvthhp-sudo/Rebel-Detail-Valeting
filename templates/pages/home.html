@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import package_cards, faq_list, review_list, review_section, cta_band, rating_line %}
+{% block main %}
+<section class="hero">
+  <div class="hero-bg">
+    {{ photo("home-hero", "Black Aston Martin DBX after cleaning, showing the gloss on the front wing and wheel", ratio="16 / 9", sizes="(min-width: 60rem) 60vw, 100vw", eager=True) }}
+  </div>
+  <div class="wrap hero-content">
+    <p class="hero-kicker">We come to you</p>
+    <h1>Mobile car valeting &amp; detailing in North Leeds</h1>
+    <p class="hero-lede">We come to your home or workplace and valet your car by hand, from a £40 maintenance clean to a full interior shampoo, through to machine polishing and ceramic coating.</p>
+    <p class="hero-towns">{% if site.towns %}Covering {{ site.area_summary }}.{% else %}{{ confirm('towns covered, e.g. "Covering Yeadon, Rawdon, Guiseley, Horsforth and nearby."') }}{% endif %}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary btn-lg" href="/contact/" data-track="quote_cta" data-label="hero">Get a quote</a>
+      <a class="btn btn-outline btn-lg" href="#prices">View packages</a>
+    </div>
+    <p class="hero-rating">{{ rating_line() }}</p>
+  </div>
+</section>
+
+<section class="facts" aria-label="Key facts">
+  <ul class="wrap facts-list">
+    <li><strong>Fully mobile</strong> We come to your home or workplace</li>
+    <li><strong>Hand washed</strong> Every valet, every time</li>
+    <li><strong>From £40</strong> Prices published below</li>
+    <li><strong>Open 7 days</strong> Mon to Sat 8–6, Sun 8–1</li>
+  </ul>
+</section>
+
+<section class="section pillars-section" aria-labelledby="pillars-h">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">What we do</p>
+      <h2 id="pillars-h">From a weekly wash to long-term paint protection</h2>
+      <p>Four levels of care, all carried out at your home or workplace.</p>
+    </div>
+    <ol class="pillars">
+      <li><a href="/valeting/">
+        <span class="pillar-img">{{ photo("valeting-hero", "Blue Bentley Bentayga after a valet", ratio="4 / 5", sizes="(min-width: 60rem) 25vw, (min-width: 40rem) 50vw, 100vw") }}</span>
+        <span class="pillar-num">01</span><span class="pillar-title">Valeting</span>
+        <span class="pillar-text">Mini, Full and Platinum valets for regular care or a full reset.</span></a></li>
+      <li><a href="/detailing/">
+        <span class="pillar-img">{{ photo("pillar-detailing", "Rear quarter and wheel of a grey Aston Martin Vantage, showing the gloss on the paint", ratio="4 / 5", sizes="(min-width: 60rem) 25vw, (min-width: 40rem) 50vw, 100vw") }}</span>
+        <span class="pillar-num">02</span><span class="pillar-title">Detailing</span>
+        <span class="pillar-text">Going beyond a valet to improve and protect the paint.</span></a></li>
+      <li><a href="/detailing/machine-polishing/">
+        <span class="pillar-img">{{ photo("corr-stack", "Before and after: scratches across a blue Ford Fiesta bumper, then the same area with the scratches removed", ratio="4 / 5", sizes="(min-width: 60rem) 25vw, (min-width: 40rem) 50vw, 100vw") }}</span>
+        <span class="pillar-num">03</span><span class="pillar-title">Correction</span>
+        <span class="pillar-text">Machine polishing to reduce swirls, haze and light scratches.</span></a></li>
+      <li><a href="/detailing/ceramic-coating/">
+        <span class="pillar-img">{{ photo("tile-ceramic", "White Ford Puma after a ceramic coating", ratio="4 / 5", sizes="(min-width: 60rem) 25vw, (min-width: 40rem) 50vw, 100vw") }}</span>
+        <span class="pillar-num">04</span><span class="pillar-title">Protection</span>
+        <span class="pillar-text">Ceramic coating, with up to 24 months of protection.</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt" id="prices" aria-labelledby="prices-h">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">01 · Valeting</p>
+      <h2 id="prices-h">Valet prices</h2>
+      <p>Three valets, each building on the one before. Everything in the Mini is in the Full, and everything in the Full is in the Platinum.</p>
+    </div>
+    {{ package_cards() }}
+    <p class="section-foot"><a class="text-link" href="/valeting/#compare">Compare all three valets side by side</a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="which-h">
+  <div class="wrap narrow">
+    <h2 id="which-h">Which valet does your car need?</h2>
+    <ul class="choose">
+      <li><a href="/valeting/mini-valet/"><span class="choose-q">It's cleaned regularly and just needs freshening up.</span><span class="choose-a">Mini Valet, £40</span></a></li>
+      <li><a href="/valeting/full-valet/"><span class="choose-q">The seats or carpets are marked, the boot is grubby, or it's going back to the leasing company.</span><span class="choose-a">Full Valet, £65</span></a></li>
+      <li><a href="/valeting/platinum-valet/"><span class="choose-q">It needs everything: leather seats, the roof lining, the arches.</span><span class="choose-a">Platinum Valet, £110</span></a></li>
+    </ul>
+    <p class="photo-prompt">Not sure? Send two or three photos of the seats, carpets and outside, and we'll tell you which valet it needs before you book.
+      <a class="btn btn-whatsapp" href="{{ wa("Hi, I'm not sure which valet my car needs. I'll send some photos. My car is a [make and model] and I'm in [postcode].") }}" data-track="whatsapp_click" data-label="which_valet">Send photos on WhatsApp</a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="work-h">Before and after</h2>
+      <p>Real cars, cleaned on customers' drives. {{ confirm("add the vehicle, town and service for each pair once photos are supplied") }}</p>
+    </div>
+    <div class="ba-grid">
+      {{ before_after("home-ba-1", "Ford Mondeo rear carpets covered in pet hair", "The same carpets after cleaning, with the hair gone", "Ford Mondeo, pet hair removed") }}
+      {{ before_after("home-ba-2", "Black BMW iX, dull and water-marked", "The same BMW iX after cleaning, glossy and reflecting the sky", "BMW iX, exterior") }}
+    </div>
+    <p class="section-foot"><a class="text-link" href="/our-work/">See more of our work</a></p>
+  </div>
+</section>
+
+<section class="section editorial-section" aria-labelledby="detail-h">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Correction &amp; protection</p>
+      <h2 id="detail-h">When the paint needs more than a wash</h2>
+      <p>A valet gets the car clean. If the paint still looks dull or covered in fine swirls, or you want it protected for the long term, that's detailing.</p>
+    </div>
+    <div class="editorial">
+      <div class="editorial-media">{{ photo("corr-side", "Before and after: scratches across a blue Ford Fiesta bumper, then the same area with the scratches removed", sizes="(min-width: 60rem) 58vw, 100vw") }}</div>
+      <div class="editorial-body">
+        <p class="eyebrow">03 · Correction</p>
+        <h3>Machine polishing &amp; paint correction</h3>
+        <p>Polishing levels the clear coat so swirls, haze and light scratches stop catching the light. We check the paint first and tell you honestly what it can and can't fix.</p>
+        <p class="editorial-caption">Ford Fiesta bumper: before (left) and after (right).</p>
+        <a class="text-link" href="/detailing/machine-polishing/">About machine polishing</a>
+      </div>
+    </div>
+    <div class="editorial editorial-reverse">
+      <div class="editorial-media">{{ photo("ceramic-hero", "White Ford Puma after Rebel's ceramic coating package", sizes="(min-width: 60rem) 58vw, 100vw") }}</div>
+      <div class="editorial-body">
+        <p class="eyebrow">04 · Protection</p>
+        <h3>Ceramic coating</h3>
+        <p>A hard, water-repelling layer bonded to prepared paint. It keeps the car cleaner for longer, makes washing easier and gives up to 24 months of protection.</p>
+        <p class="editorial-caption">Ford Puma, ceramic coating package.</p>
+        <a class="text-link" href="/detailing/ceramic-coating/">About ceramic coating</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ review_section(reviews_for("home"), "What customers say") }}
+
+<section class="section section-alt" aria-labelledby="vip-h">
+  <div class="wrap split">
+    <div>
+      <h2 id="vip-h">Keep it that way with Rebel VIP</h2>
+      <p>Once your car has been brought up to standard, Rebel VIP keeps it there with fortnightly or monthly valets at £35 a visit. {{ confirm("what each VIP visit includes, e.g. the same as a Mini Valet") }}</p>
+      <a class="btn btn-primary" href="/vip/" data-track="vip_cta" data-label="home">About Rebel VIP</a>
+    </div>
+    <ol class="steps">
+      <li><strong>First clean</strong> Charged at the Full Valet price, to bring the car up to a standard we can maintain.</li>
+      <li><strong>Agree a schedule</strong> Fortnightly or monthly, on a day that suits you.</li>
+      <li><strong>We keep it there</strong> £35 a visit, at your home or workplace.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="connor-h">
+  <div class="wrap split split-media">
+    <div class="split-media-img">
+      {{ photo("connor-portrait", "Connor, who runs Rebel Detail & Valeting", ratio="4 / 5", sizes="(min-width: 60rem) 40vw, 100vw") }}
+    </div>
+    <div>
+      <h2 id="connor-h">Meet Connor</h2>
+      <p>Rebel started because Connor loves cleaning cars. What began as a hobby became a full-time business, and it's still family run. When you book Rebel, Connor does the work himself.</p>
+      <a class="text-link" href="/about/">More about Connor and Rebel</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="areas-h">
+  <div class="wrap narrow">
+    <h2 id="areas-h">Where we work</h2>
+    <p>We come to you across {{ site.area_summary }}.</p>
+    {% if site.towns %}
+    <ul class="town-list">{% for t in site.towns|sort %}<li>{{ t }}</li>{% endfor %}</ul>
+    {% else %}<p>{{ confirm("list of towns covered") }}</p>{% endif %}
+    <a class="text-link" href="/areas/">Check if we cover you</a>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-h">
+  <div class="wrap narrow">
+    <h2 id="faq-h">Common questions</h2>
+    {{ faq_list(faqs_for("home")) }}
+    <p class="section-foot"><a class="text-link" href="/faq/">All questions</a></p>
+  </div>
+</section>
+
+{{ cta_band("Ready to book a valet?", "Tell us the car and your postcode, and we'll confirm the price and a time.") }}
+{% endblock %}

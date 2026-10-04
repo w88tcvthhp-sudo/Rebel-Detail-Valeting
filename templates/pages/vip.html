@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import faq_list, review_list, review_section, cta_band %}
+{% set vipfaqs = [
+  {"q": "Why is the first clean charged at the Full Valet price?", "a": "Regular maintenance valets keep a car at a standard. They aren't designed to bring a neglected car up to it. The first clean gets the car to a level we can then maintain on every visit."},
+  {"q": "How much does it cost?", "a": "Your first clean is charged at the Full Valet price (£65). After that, each visit is £35. Fortnightly works out at about £70 a month; monthly is £35 a month."},
+  {"q": "What does each VIP visit include?", "a": "[[CONFIRM: what a maintenance visit includes, e.g. the same as a Mini Valet.]]"},
+  {"q": "Is there a minimum term, and can I pause or cancel?", "a": "[[CONFIRM: minimum term, notice period, pausing for holidays.]]"},
+  {"q": "How do I pay?", "a": "By card, cash or bank transfer. [[CONFIRM: whether VIP visits are paid per visit or by standing order.]]"},
+  {"q": "What discounts do members get?", "a": "[[CONFIRM: the actual discount on other services, e.g. a percentage off machine polishing.]]"}
+] %}
+{% block main %}
+<section class="page-hero page-hero-dark">
+  <div class="wrap page-hero-grid">
+    <div>
+      <p class="eyebrow">Rebel VIP</p>
+      <h1>Rebel VIP</h1>
+      <p class="lede">Regular valets at your home or workplace that keep your car at the standard it was brought to. Fortnightly or monthly, at £35 a visit.</p>
+      <p>{{ confirm("what each VIP visit includes, e.g. the same as a Mini Valet") }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="/contact/?service=vip" data-track="vip_cta" data-label="vip_hero">Join Rebel VIP</a>
+        <a class="btn btn-outline-light" href="{{ wa("Hi, I'm interested in Rebel VIP. My car is a [make and model] and I'm in [postcode].") }}" data-track="whatsapp_click" data-label="vip_hero">Ask on WhatsApp</a>
+      </div>
+    </div>
+    <div>{{ photo("vip-hero", "Rear of a blue Bentley Bentayga after cleaning, with Rebel's red van parked behind it", ratio="4 / 3", eager=True) }}</div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="get-h">
+  <div class="wrap narrow">
+    <h2 id="get-h">What members get</h2>
+    <ul class="ticks">
+      <li>Fortnightly or monthly valets, at your home or workplace</li>
+      <li>Discounts on other Rebel services {{ confirm("what the discounts are") }}</li>
+      <li>Priority access to dates and times we don't offer to other customers</li>
+      <li>A car that's kept clean all year, rather than cleaned once and left</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="how-h">
+  <div class="wrap narrow">
+    <h2 id="how-h">How to join</h2>
+    <ol class="steps steps-numbered">
+      <li><strong>Send an enquiry</strong> Use the <a href="/contact/?service=vip">quote form</a> or WhatsApp, and tell us the car and your postcode.</li>
+      <li><strong>Agree a schedule</strong> We'll be in touch to arrange a time and date for your first clean and the visits after it.</li>
+      <li><strong>First clean</strong> Charged at the Full Valet price (£65), to bring the car up to a standard we can maintain.</li>
+      <li><strong>Regular visits</strong> From then on, £35 a visit, fortnightly or monthly.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="who-h">
+  <div class="wrap narrow">
+    <h2 id="who-h">Who it suits</h2>
+    <ul class="ticks">
+      <li>Anyone who wants a clean car without booking each time</li>
+      <li>Cars that have just had a ceramic coating and need careful maintenance washes</li>
+      <li>Busy households and people who can't get to a car wash</li>
+    </ul>
+    <p>{{ confirm("any eligibility limits, e.g. vehicle size, distance, or a maximum number of members") }}</p>
+  </div>
+</section>
+
+{{ review_section(reviews_for("regular"), "Customers who book Connor regularly", "rev-h", alt=True) }}
+
+<section class="section" aria-labelledby="faq-h">
+  <div class="wrap narrow">
+    <h2 id="faq-h">Rebel VIP questions</h2>
+    {{ faq_list(vipfaqs) }}
+  </div>
+</section>
+
+{{ cta_band("Join Rebel VIP", "Tell us the car and your postcode and we'll arrange your first clean.", ("Join Rebel VIP", "/contact/?service=vip"), "Hi, I'm interested in Rebel VIP. My car is a [make and model] and I'm in [postcode].") }}
+{% endblock %}

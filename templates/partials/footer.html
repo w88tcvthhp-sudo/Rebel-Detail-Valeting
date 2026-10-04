@@ -1,0 +1,52 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      {% if logo %}<img class="footer-logo" src="/assets/img/logo.webp" alt="{{ site.name }}" width="805" height="599" loading="lazy">{% endif %}
+      <p class="footer-name">{{ site.name }}</p>
+      <p>Mobile car valeting and detailing across {{ site.base_area }}. We come to your home or workplace.</p>
+      <ul class="footer-contact">
+        <li><a href="tel:{{ site.phone_e164 }}" data-track="phone_click" data-label="footer">{{ site.phone_display }}</a></li>
+        <li><a href="{{ wa() }}" data-track="whatsapp_click" data-label="footer">Message us on WhatsApp</a></li>
+        <li><a href="mailto:{{ site.email }}" data-track="email_click" data-label="footer">{{ site.email }}</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Opening hours</p>
+      <dl class="hours">
+        {% for h in site.hours %}<div><dt>{{ h.label }}</dt><dd>{{ h.display }}</dd></div>{% endfor %}
+      </dl>
+    </div>
+    <nav aria-label="Services">
+      <p class="footer-heading">Services</p>
+      <ul>
+        {% for p in packages %}<li><a href="/valeting/{{ p.slug }}/">{{ p.name }}</a></li>{% endfor %}
+        <li><a href="/detailing/machine-polishing/">Machine polishing</a></li>
+        <li><a href="/detailing/ceramic-coating/">Ceramic coating</a></li>
+        <li><a href="/vip/">Rebel VIP</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="About Rebel">
+      <p class="footer-heading">Rebel</p>
+      <ul>
+        <li><a href="/our-work/">Our work</a></li>
+        <li><a href="/reviews/">Reviews</a></li>
+        <li><a href="/areas/">Areas we cover</a></li>
+        <li><a href="/about/">Meet Connor</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/contact/">Get a quote</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap footer-base">
+    <ul class="footer-social">
+      {% for s in site.social if s.confirmed %}<li><a href="{{ s.url }}" rel="noopener">{{ s.name }}</a></li>{% endfor %}
+      <li><a href="{{ site.google_reviews_url }}" rel="noopener">Google reviews</a></li>
+    </ul>
+    <ul class="footer-legal">
+      <li><a href="/privacy/">Privacy</a></li>
+      <li><a href="/cookies/">Cookies</a></li>
+      <li><a href="/booking-terms/">Booking terms</a></li>
+    </ul>
+    <p class="footer-legal-entity">© {{ year }} {{ site.name }}. {{ site.trading_entity|rich }}</p>
+  </div>
+</footer>

@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import faq_list, cta_band %}
+{% set ccfaqs = [
+  {"q": "Will a ceramic coating stop stone chips and scratches?", "a": "No. A coating is far harder than wax but it is a thin layer. It won't stop stone chips, and the car can still be scratched. Paint protection film is the product for chip protection."},
+  {"q": "Do I still need to wash the car?", "a": "Yes. A coated car stays cleaner for longer and is much easier to wash, but it still needs washing. Regular, careful washing is what keeps a coating performing. <a href=\"/vip/\">Rebel VIP</a> can take care of that."},
+  {"q": "Can a coating be applied at my home?", "a": "[[CONFIRM: conditions needed, e.g. dry weather, covered space, how long the car must stay dry afterwards.]]"},
+  {"q": "Does the car need polishing first?", "a": "A coating locks in whatever is underneath it, including swirls, so the paint is usually polished first. [[CONFIRM: whether polishing is always included or quoted separately.]]"}
+] %}
+{% block main %}
+<section class="hero hero-feature">
+  <div class="hero-bg">{{ photo("ceramic-hero", "White Ford Puma after Rebel's ceramic coating package", ratio="16 / 9", sizes="(min-width: 60rem) 60vw, 100vw", eager=True) }}</div>
+  <div class="wrap hero-content">
+      <p class="eyebrow">04 · Protection</p>
+      <h1>Ceramic coating</h1>
+      <p class="lede">A ceramic coating is a liquid that bonds to the paint and cures into a hard, glossy, water-repelling layer. It makes the car easier to keep clean and protects the finish for far longer than a wax.</p>
+      <p>The coating Rebel currently uses gives up to 24 months of protection. {{ confirm("coating product name, price or from-price, and how long the job takes") }}</p>
+      <p><a class="text-link" href="/our-work/#ford-puma">See a recent ceramic coating job: Ford Puma</a></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/contact/?service=ceramic" data-track="quote_cta" data-label="ceramic_hero">Get a ceramic coating quote</a>
+      </div>
+    </div>
+</section>
+
+<section class="section" aria-labelledby="does-h">
+  <div class="wrap compare-two">
+    <div>
+      <h2 id="does-h">What a coating does</h2>
+      <ul class="ticks">
+        <li>Water and dirt run off more easily, so the car stays cleaner for longer</li>
+        <li>Washing is quicker and gentler</li>
+        <li>Adds depth and gloss to well-prepared paint</li>
+        <li>Resists bird droppings, traffic film and UV for longer than wax or sealant</li>
+      </ul>
+    </div>
+    <div>
+      <h2 id="doesnt-h">What it doesn't do</h2>
+      <ul class="crosses">
+        <li>It doesn't make the paint scratch-proof</li>
+        <li>It won't stop stone chips</li>
+        <li>It won't hide swirls. It locks in whatever is underneath, which is why paint is usually polished first.</li>
+        <li>It doesn't mean the car never needs washing</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="puma-h">
+  <div class="wrap editorial editorial-reverse">
+    <div class="editorial-media">{{ photo("work-puma", "White Ford Puma after a ceramic coating, side view on a driveway", sizes="(min-width: 60rem) 58vw, 100vw") }}</div>
+    <div class="editorial-body">
+      <p class="eyebrow">Recent work</p>
+      <h2 id="puma-h">Ford Puma, ceramic coating package</h2>
+      <p>A new car protected from the start. The coating keeps it cleaner for longer and makes every wash quicker.</p>
+      <a class="text-link" href="/our-work/#ford-puma">See the full job</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="vs-h">
+  <div class="wrap narrow">
+    <h2 id="vs-h">Wax, sealant or coating?</h2>
+    <div class="table-wrap">
+      <table class="simple-table">
+        <caption class="sr-only">How wax, sealant and ceramic coating compare</caption>
+        <thead><tr><th scope="col"></th><th scope="col">Typically lasts</th><th scope="col">Preparation needed</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Wax</th><td>Weeks</td><td>A clean car</td></tr>
+          <tr><th scope="row">Sealant</th><td>Months</td><td>A clean car</td></tr>
+          <tr><th scope="row">Ceramic coating</th><td>Years, depending on the product and how the car is washed</td><td>Full decontamination and usually polishing</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="prep-h">
+  <div class="wrap narrow">
+    <h2 id="prep-h">How the paint is prepared</h2>
+    <p>{{ confirm("Rebel's actual process and product. Typical steps are listed below. Edit them to match.") }}</p>
+    <ol class="steps steps-numbered">
+      <li><strong>Wash and decontaminate</strong> A full wash, then iron fallout and tar removed and the paint clayed smooth.</li>
+      <li><strong>Polish</strong> Machine polishing to remove swirls before they're sealed in. See <a href="/detailing/machine-polishing/">machine polishing</a>.</li>
+      <li><strong>Panel wipe</strong> Polishing oils are removed so the coating can bond to bare paint.</li>
+      <li><strong>Apply</strong> The coating is applied panel by panel and levelled.</li>
+      <li><strong>Cure</strong> The car must be kept dry while the coating cures. {{ confirm("how long, and the first-wash advice for the product used") }}</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="after-h">
+  <div class="wrap narrow">
+    <h2 id="after-h">Looking after a coated car</h2>
+    <ul class="ticks">
+      <li>Wash with a pH-neutral shampoo and a clean mitt</li>
+      <li>Avoid automatic brush car washes</li>
+      <li>Dry with a clean microfibre towel or air</li>
+    </ul>
+    <p>Regular maintenance washes keep the coating performing. <a href="/vip/">Rebel VIP</a> covers fortnightly or monthly valets at your home.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-h">
+  <div class="wrap narrow">
+    <h2 id="faq-h">Ceramic coating questions</h2>
+    {{ faq_list(ccfaqs) }}
+  </div>
+</section>
+
+{{ cta_band("Get a ceramic coating quote", "Send photos of the paint and tell us the car. We'll recommend the right preparation.", ("Get a quote", "/contact/?service=ceramic"), "Hi, I'd like a ceramic coating quote for my [make and model]. I'm in [postcode].") }}
+{% endblock %}

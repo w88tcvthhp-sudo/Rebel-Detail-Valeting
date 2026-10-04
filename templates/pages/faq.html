@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import faq_list, cta_band %}
+{% set sections = [] %}
+{% for f in faqs %}{% if f.section not in sections %}{% set _ = sections.append(f.section) %}{% endif %}{% endfor %}
+{% block main %}
+<section class="page-hero">
+  <div class="wrap narrow">
+    <p class="eyebrow">Questions</p>
+      <h1>Frequently asked questions</h1>
+    <p class="lede">Answers about your appointment, prices, the work itself and booking. Can't see your question? Message us on WhatsApp.</p>
+    <nav class="toc" aria-label="Question topics"><ul>
+      {% for s in sections %}<li><a href="#{{ s|lower|replace(' ', '-') }}">{{ s }}</a></li>{% endfor %}
+    </ul></nav>
+  </div>
+</section>
+{% for s in sections %}
+<section class="section{% if loop.index is even %} section-alt{% endif %}" id="{{ s|lower|replace(' ', '-') }}" aria-labelledby="h-{{ loop.index }}">
+  <div class="wrap narrow">
+    <h2 id="h-{{ loop.index }}">{{ s }}</h2>
+    {{ faq_list(faqs|selectattr("section", "equalto", s)|list) }}
+  </div>
+</section>
+{% endfor %}
+{{ cta_band("Still got a question?", "Message us on WhatsApp or call, and we'll answer it.") }}
+{% endblock %}

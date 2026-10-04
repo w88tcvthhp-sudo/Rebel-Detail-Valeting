@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% set services = [
+  ("mini", "Mini Valet", "£40"), ("full", "Full Valet", "£65"), ("platinum", "Platinum Valet", "£110"),
+  ("polishing", "Machine polishing", "Quote"), ("ceramic", "Ceramic coating", "Quote"),
+  ("vip", "Rebel VIP", "£35 a visit"), ("notsure", "Not sure", "We'll advise")] %}
+{% block main %}
+<section class="page-hero page-hero-tight">
+  <div class="wrap narrow">
+    <p class="eyebrow">Get a quote</p>
+      <h1>Get a quote</h1>
+    <p class="lede">Tell us the car, your postcode and what it needs. We'll confirm the price and a time. We reply within 24 to 48 hours. For anything urgent, call or WhatsApp.</p>
+    <div class="quick-contact">
+      <a class="btn btn-whatsapp" href="{{ wa() }}" data-track="whatsapp_click" data-label="contact">WhatsApp {{ site.phone_display }}</a>
+      <a class="btn btn-outline" href="tel:{{ site.phone_e164 }}" data-track="phone_click" data-label="contact">Call {{ site.phone_display }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap narrow">
+    <form class="quote-form" name="quote" method="POST" action="/thank-you/" enctype="multipart/form-data"
+          data-netlify="true" netlify-honeypot="company" data-track-form="quote_submit">
+      <input type="hidden" name="form-name" value="quote">
+      <p class="hp" aria-hidden="true"><label>Leave this empty <input name="company" tabindex="-1" autocomplete="off"></label></p>
+
+      <fieldset class="field-group">
+        <legend>What does your car need?</legend>
+        <div class="service-options">
+          {% for value, label, price in services %}
+          <label class="service-option">
+            <input type="radio" name="service" value="{{ value }}" required{% if loop.last %} checked{% endif %}>
+            <span class="service-option-name">{{ label }}</span><span class="service-option-price">{{ price }}</span>
+          </label>
+          {% endfor %}
+        </div>
+      </fieldset>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="vehicle">Make and model</label>
+          <input id="vehicle" name="vehicle" type="text" required autocomplete="off" placeholder="e.g. VW Golf">
+        </div>
+        <div class="field">
+          <label for="postcode">Postcode</label>
+          <input id="postcode" name="postcode" type="text" required autocomplete="postal-code" inputmode="text" maxlength="8" class="input-short">
+        </div>
+      </div>
+
+      <fieldset class="field-group">
+        <legend>What condition is it in? <span class="optional">(optional)</span></legend>
+        <div class="service-options service-options-condition">
+          {% for value, label, hint in [
+            ("good", "Well kept", "Cleaned regularly"),
+            ("fair", "Needs a proper clean", "Marked seats or carpets, grubby boot"),
+            ("poor", "Neglected", "Hasn't been cleaned in a long time"),
+            ("unsure", "Not sure", "Photos will help")] %}
+          <label class="service-option">
+            <input type="radio" name="condition" value="{{ value }}">
+            <span class="service-option-name">{{ label }}</span><span class="service-option-price">{{ hint }}</span>
+          </label>
+          {% endfor %}
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="date">Preferred date <span class="optional">(optional)</span></label>
+        <input id="date" name="preferred_date" type="date" class="input-short">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="phone">Mobile number</label>
+          <input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email <span class="optional">(optional)</span></label>
+        <input id="email" name="email" type="email" autocomplete="email">
+      </div>
+
+      <div class="field">
+        <label for="photos">Photos of the car <span class="optional">(optional, helps us quote accurately)</span></label>
+        <input id="photos" name="photos" type="file" accept="image/*" multiple aria-describedby="photos-hint">
+        <p class="hint" id="photos-hint">Seats, carpets and the outside are most useful. Or send them on WhatsApp after you submit.</p>
+      </div>
+
+      <div class="field">
+        <label for="message">Anything else? <span class="optional">(optional)</span></label>
+        <textarea id="message" name="message" rows="3" placeholder="e.g. dog hair in the boot, parking is on the street"></textarea>
+      </div>
+
+      <p class="privacy-note">We'll only use these details to reply to you and arrange your booking. See our <a href="/privacy/">privacy policy</a>.</p>
+      <button class="btn btn-primary btn-lg btn-block" type="submit">Send quote request</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import cta_band %}
+{% block main %}
+<section class="page-hero">
+  <div class="wrap narrow">
+    <p class="eyebrow">Our work</p>
+      <h1>Our work</h1>
+    <p class="lede">Real cars, cleaned and detailed on customers' drives around North Leeds, from family cars to Bentleys and Aston Martins. Every photo here is Rebel's own work.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="work-grid">
+      {% for j in work %}
+      <article class="work-item" id="{{ j.id }}">
+        {{ photo(j.slot, j.alt, sizes="(min-width: 60rem) 33vw, (min-width: 40rem) 50vw, 100vw") }}
+        <h2 class="work-title">{{ j.vehicle }}</h2>
+        <p class="work-meta">
+          {% if j.service %}<span class="work-service">{{ j.service }}</span>{% else %}{{ confirm("service for this job") }}{% endif %}
+          {% if j.ba %}<span class="work-ba">Before (left) and after (right)</span>{% endif %}
+        </p>
+        {% if j.get("note") %}<p class="work-note">{{ j.note }}</p>{% endif %}
+        {% if j.get("more") %}
+        <details class="work-more"><summary>More photos</summary>
+          {% for m in j.more %}{{ photo(m.slot, m.alt, sizes="(min-width: 60rem) 33vw, 100vw") }}{% endfor %}
+        </details>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    <p class="section-foot">{{ confirm("the town for each job (only if the customer is happy for it to be shown). Strong jobs, starting with the DBX and the Puma, can become their own case study pages.") }}</p>
+  </div>
+</section>
+{{ cta_band("Want a result like this?", "Tell us the car and what it needs, and we'll recommend the right service.") }}
+{% endblock %}

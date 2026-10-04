@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import review_list, cta_band %}
+{% block main %}
+<section class="page-hero">
+  <div class="wrap narrow">
+    <p class="eyebrow">Reviews</p>
+    <h1>Customer reviews</h1>
+    <p class="lede">{{ fb_count }} reviews from Rebel's customers on Facebook, from family cars full of dog hair to lease returns and wedding cars. Every review is shown word for word.</p>
+    <div class="hero-actions">
+      <a class="btn btn-outline" href="{{ site.social[0].url }}reviews" rel="noopener">See them on Facebook</a>
+      <a class="btn btn-outline" href="{{ site.google_reviews_url }}" rel="noopener">Google reviews</a>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    {{ review_list(reviews_for(limit=200, fallback=False)) }}
+  </div>
+</section>
+<section class="section section-alt">
+  <div class="wrap narrow">
+    <h2>Had a valet with us?</h2>
+    <p>A short review helps other people find Rebel.</p>
+    <a class="btn btn-primary" href="{{ site.google_reviews_url }}" rel="noopener" data-track="review_click">Leave a Google review</a>
+    <p>{{ confirm("the direct 'write a review' link from the Google Business Profile, to replace the general profile link") }}</p>
+  </div>
+</section>
+{{ cta_band("Book your valet", "Tell us the car and your postcode, and we'll confirm the price and a time.") }}
+{% endblock %}

@@ -1,0 +1,228 @@
+{
+  "_note": "One entry per job. 'service' only when confirmed by Rebel (otherwise null, which shows a confirm marker). 'ba' true = image is a before|after composite.",
+  "jobs": [
+    {
+      "id": "aston-martin-dbx",
+      "vehicle": "Aston Martin DBX",
+      "slot": "work-1",
+      "ba": true,
+      "service": null,
+      "town": null,
+      "alt": "Before and after: rear of a black Aston Martin DBX, dull and water-marked, then clean and glossy",
+      "more": [
+        {
+          "slot": "work-5",
+          "alt": "Before and after: front wing and wheel of the same DBX"
+        },
+        {
+          "slot": "work-6",
+          "alt": "Before and after: the DBX's steering wheel and footwell"
+        }
+      ]
+    },
+    {
+      "id": "ford-mondeo",
+      "vehicle": "Ford Mondeo",
+      "slot": "work-mondeo-carpet",
+      "ba": true,
+      "service": null,
+      "town": null,
+      "alt": "Before and after: Ford Mondeo rear carpets covered in pet hair, then clean",
+      "note": "Heavy pet hair removed from the carpets and seats.",
+      "more": [
+        {
+          "slot": "work-mondeo-footwell",
+          "alt": "Before and after: the Mondeo's other rear footwell, carpet thick with pet hair, then clean"
+        },
+        {
+          "slot": "work-mondeo-rear",
+          "alt": "Before and after: the Mondeo's rear seats, covered in pet hair, then clean"
+        },
+        {
+          "slot": "work-mondeo-front",
+          "alt": "Before and after: the Mondeo's dashboard, front carpet and passenger seat"
+        },
+        {
+          "slot": "work-mondeo-seat",
+          "alt": "Before and after: the Mondeo's driver's seat, marked and dusty, then clean"
+        },
+        {
+          "slot": "work-mondeo-wheel",
+          "alt": "Before and after: the Mondeo's steering wheel and driver's seat"
+        }
+      ]
+    },
+    {
+      "id": "ford-puma",
+      "vehicle": "Ford Puma",
+      "slot": "work-puma",
+      "ba": false,
+      "service": "Ceramic coating package",
+      "town": null,
+      "alt": "White Ford Puma after a ceramic coating, side view on a driveway",
+      "note": "Coating rated for up to 24 months of protection.",
+      "more": [
+        {
+          "slot": "work-puma-front",
+          "alt": "Front of the white Ford Puma after its ceramic coating"
+        },
+        {
+          "slot": "work-puma-rear",
+          "alt": "Rear of the Ford Puma, with Rebel's red van and kit beside it"
+        }
+      ]
+    },
+    {
+      "id": "bmw-ix",
+      "vehicle": "BMW iX",
+      "slot": "work-ix",
+      "ba": true,
+      "service": null,
+      "town": null,
+      "alt": "Before and after: rear quarter of a black BMW iX, dull with water marks, then glossy and reflecting the sky",
+      "more": [
+        {
+          "slot": "work-ix-front",
+          "alt": "Before and after: front three-quarter of the same BMW iX, with Rebel's red van parked behind"
+        }
+      ]
+    },
+    {
+      "id": "bentley-bentayga",
+      "vehicle": "Bentley Bentayga",
+      "slot": "work-bentley",
+      "ba": false,
+      "service": null,
+      "town": null,
+      "alt": "Blue Bentley Bentayga after cleaning, on a gravel drive"
+    },
+    {
+      "id": "renault-clio",
+      "vehicle": "Renault Clio",
+      "slot": "work-clio",
+      "ba": true,
+      "service": null,
+      "town": null,
+      "alt": "Before and after: silver Renault Clio with green algae on the bonnet and sills, then clean",
+      "note": "Green algae and grime cleared from the bonnet, door and sills."
+    },
+    {
+      "id": "stained-seat",
+      "vehicle": "Stained fabric seat",
+      "slot": "work-seat",
+      "ba": true,
+      "service": null,
+      "town": null,
+      "alt": "Before and after: fabric seat base covered in water marks, then clean"
+    },
+    {
+      "id": "mercedes-amg-sl",
+      "vehicle": "Mercedes-AMG SL 43",
+      "slot": "work-sl",
+      "ba": false,
+      "service": null,
+      "town": null,
+      "alt": "Silver Mercedes-AMG SL after cleaning, front three-quarter view",
+      "more": [
+        {
+          "slot": "work-sl-front",
+          "alt": "Front of the Mercedes-AMG SL 43 after cleaning"
+        },
+        {
+          "slot": "work-sl-rear34",
+          "alt": "Rear three-quarter of the Mercedes-AMG SL 43"
+        },
+        {
+          "slot": "work-sl-interior",
+          "alt": "Steering wheel and leather seat of the Mercedes-AMG SL 43"
+        },
+        {
+          "slot": "work-sl-side",
+          "alt": "Side of the Mercedes-AMG SL 43 after cleaning"
+        },
+        {
+          "slot": "work-sl-rear",
+          "alt": "Rear of the Mercedes-AMG SL 43 after cleaning"
+        }
+      ]
+    },
+    {
+      "id": "bmw-m4",
+      "vehicle": "BMW M4 Convertible",
+      "slot": "work-m4",
+      "ba": false,
+      "service": null,
+      "town": null,
+      "alt": "Purple BMW M4 Convertible after cleaning, on a wet driveway",
+      "more": [
+        {
+          "slot": "work-m4-front",
+          "alt": "Bonnet of the purple BMW M4 reflecting the trees after cleaning, with Rebel's van behind"
+        },
+        {
+          "slot": "work-m4-front34",
+          "alt": "Front wing and wheel of the BMW M4"
+        },
+        {
+          "slot": "work-m4-rear",
+          "alt": "Rear quarter and wheel of the BMW M4"
+        },
+        {
+          "slot": "work-m4-wheel",
+          "alt": "Cleaned BMW M4 alloy wheel and dressed tyre"
+        }
+      ]
+    },
+    {
+      "id": "aston-martin-vantage",
+      "vehicle": "Aston Martin Vantage",
+      "slot": "work-vantage",
+      "ba": false,
+      "service": null,
+      "town": null,
+      "alt": "Grey Aston Martin Vantage after cleaning, rear three-quarter view",
+      "more": [
+        {
+          "slot": "work-vantage-front",
+          "alt": "Front of the Aston Martin Vantage after cleaning"
+        },
+        {
+          "slot": "work-vantage-rear",
+          "alt": "Rear quarter and wheel of the Aston Martin Vantage"
+        }
+      ]
+    },
+    {
+      "id": "mini-jcw-gp",
+      "vehicle": "Mini John Cooper Works GP",
+      "slot": "work-mini",
+      "ba": false,
+      "service": null,
+      "town": null,
+      "alt": "Mini John Cooper Works GP after cleaning, rear three-quarter view",
+      "more": [
+        {
+          "slot": "work-mini-front",
+          "alt": "Front of the Mini John Cooper Works GP after cleaning"
+        },
+        {
+          "slot": "work-mini-side",
+          "alt": "Side of the Mini John Cooper Works GP after cleaning"
+        },
+        {
+          "slot": "work-snowfoam",
+          "alt": "The same Mini covered in snow foam during the pre-wash"
+        }
+      ]
+    },
+    {
+      "id": "ford-fiesta",
+      "vehicle": "Ford Fiesta",
+      "slot": "work-4",
+      "ba": true,
+      "service": null,
+      "town": null,
+      "alt": "Before and after: scratches on the rear of a blue Ford Fiesta, then removed"
+    }
+  ]
+}

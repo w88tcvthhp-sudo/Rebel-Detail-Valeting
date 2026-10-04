@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-GB" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+{% if noindex %}
+<meta name="robots" content="noindex, follow">
+{% endif %}
+<link rel="canonical" href="{{ canonical }}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:url" content="{{ canonical }}">
+{% if og_image %}
+<meta property="og:image" content="{{ site.url }}/assets/img/og-default.jpg">
+<meta name="twitter:card" content="summary_large_image">
+{% endif %}
+<meta name="theme-color" content="#080707">
+{% for f in font_preloads %}
+<link rel="preload" href="/assets/fonts/{{ f }}" as="font" type="font/woff2" crossorigin>
+{% endfor %}
+<link rel="stylesheet" href="{{ asset('css/site.css') }}">
+{% if logo %}<link rel="icon" href="/assets/img/favicon-48.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">{% endif %}
+<script>document.documentElement.className='js';window.REBEL={gaId:{{ site.ga_id|tojson }}};</script>
+<script src="{{ asset('js/site.js') }}" defer></script>
+{% for s in schema %}
+<script type="application/ld+json">{{ s }}</script>
+{% endfor %}
+</head>
+<body class="{% if page.sticky %}has-actionbar{% endif %}">
+<a class="skip-link" href="#main">Skip to main content</a>
+{% if staging %}
+<div class="staging-bar" role="note">Staging build. Highlighted text needs confirming before launch.</div>
+{% endif %}
+{% include "partials/header.html" %}
+<main id="main">
+{% if page.crumbs %}
+<nav class="crumbs wrap" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    {% for name, url in page.crumbs %}
+    <li>{% if loop.last %}<span aria-current="page">{{ name }}</span>{% else %}<a href="{{ url }}">{{ name }}</a>{% endif %}</li>
+    {% endfor %}
+  </ol>
+</nav>
+{% endif %}
+{% block main %}{% endblock %}
+</main>
+{% include "partials/footer.html" %}
+{% if page.sticky %}{% include "partials/actionbar.html" %}{% endif %}
+</body>
+</html>

@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import review_section, faq_list, cta_band %}
+{% set mpfaqs = [
+  {"q": "Will polishing remove every scratch?", "a": "No. It removes or reduces defects that sit within the clear coat. Scratches through to the colour coat or primer, and stone chips, need paint repair. We'll tell you what to expect before starting."},
+  {"q": "Does polishing harm the paint?", "a": "It removes a very thin layer of clear coat, which is how it levels out defects. That's why it's done carefully and not repeated often. Afterwards, protecting the paint and washing it safely keeps the result for longer."},
+  {"q": "Can you polish my car at home?", "a": "[[CONFIRM: requirements, e.g. dry weather, covered space, access to the whole car.]]"},
+  {"q": "How long does it take?", "a": "[[CONFIRM: typical times for each stage offered.]]"}
+] %}
+{% block main %}
+<section class="hero hero-feature hero-split">
+  <div class="hero-bg">{{ photo("corr-stack", "Before and after: scratches across a blue Ford Fiesta bumper, then the same area with the scratches removed", ratio="4 / 5", sizes="(min-width: 60rem) 45vw, 100vw", eager=True) }}</div>
+  <div class="wrap hero-content">
+      <p class="eyebrow">03 · Correction</p>
+      <h1>Machine polishing &amp; paint correction</h1>
+      <p class="lede">Machine polishing removes a very thin layer of clear coat to level out swirl marks, haze and light scratches, so the paint reflects light evenly again.</p>
+      <p>{{ confirm("price or from-price, and approximate time") }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/contact/?service=polishing" data-track="quote_cta" data-label="polishing_hero">Get a polishing quote</a>
+        <a class="btn btn-whatsapp" href="{{ wa("Hi, I'd like a quote for machine polishing. I'll send some photos of the paint. My car is a [make and model] and I'm in [postcode].") }}" data-track="whatsapp_click" data-label="polishing_hero">Send photos of your paint</a>
+      </div>
+    </div>
+</section>
+
+<section class="section" aria-labelledby="ba-h">
+  <div class="wrap editorial">
+    <div class="editorial-media">{{ before_after("polish-ba", "Scratches across the rear bumper of a blue Ford Fiesta", "The same bumper with the scratches removed", "Ford Fiesta, rear bumper") }}</div>
+    <div class="editorial-body">
+      <p class="eyebrow">Recent work</p>
+      <h2 id="ba-h">Scratches out, gloss back</h2>
+      <p>Drag the slider to compare. The scratches on this Fiesta's bumper sat in the clear coat, so they could be polished out rather than painted.</p>
+      <p>{{ confirm("confirm this Fiesta was machine polished, and which stage") }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="fix-h">
+  <div class="wrap compare-two">
+    <div>
+      <h2 id="fix-h">What polishing can improve</h2>
+      <ul class="ticks">
+        <li>Swirl marks, often caused by washing with dirty mitts, brushes or automatic car washes</li>
+        <li>Haze and dullness</li>
+        <li>Light scratches that sit within the clear coat</li>
+        <li>Marks left by previous poor polishing (holograms)</li>
+        <li>Light water-spot marks</li>
+      </ul>
+    </div>
+    <div>
+      <h2 id="nofix-h">What it can't fix</h2>
+      <ul class="crosses">
+        <li>Scratches that have gone through to the colour coat or primer</li>
+        <li>Stone chips</li>
+        <li>Dents</li>
+        <li>Peeling or failed lacquer</li>
+      </ul>
+      <p>These need paint repair, not polishing.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="stage-h">
+  <div class="wrap narrow">
+    <h2 id="stage-h">Enhancement or correction?</h2>
+    <p><strong>A one-stage polish</strong> (often called an enhancement) improves gloss and removes a good share of light defects in a day.</p>
+    <p><strong>A multi-stage correction</strong> uses a cutting stage followed by a finishing stage. It removes more, takes longer and suits paint with heavier swirls.</p>
+    <p>{{ confirm("which stages Rebel offers, with prices and times for each") }}</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="proc-h">
+  <div class="wrap narrow">
+    <h2 id="proc-h">How the job is done</h2>
+    <p>{{ confirm("Rebel's actual process. Typical steps are listed below. Edit them to match what Connor does.") }}</p>
+    <ol class="steps steps-numbered">
+      <li><strong>Wash</strong> A full pre-wash, snow foam and hand wash.</li>
+      <li><strong>Decontaminate</strong> Iron fallout and tar removed, then the paint clayed so it's smooth.</li>
+      <li><strong>Inspect</strong> The paint is checked under strong light to see what needs correcting.</li>
+      <li><strong>Mask</strong> Trim, rubbers and edges are taped to protect them.</li>
+      <li><strong>Polish</strong> Panel by panel, checking progress as it goes.</li>
+      <li><strong>Protect</strong> Freshly polished paint is protected, with a sealant or a <a href="/detailing/ceramic-coating/">ceramic coating</a>.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="faq-h">
+  <div class="wrap narrow">
+    <h2 id="faq-h">Machine polishing questions</h2>
+    {{ faq_list(mpfaqs) }}
+  </div>
+</section>
+
+{{ review_section(reviews_for("detailing"), "What customers say", "proof-h") }}
+
+{{ cta_band("Get a polishing quote", "Send a few photos of the paint in daylight, and a close-up of the worst area.", ("Get a polishing quote", "/contact/?service=polishing"), "Hi, I'd like a quote for machine polishing. I'll send some photos of the paint. My car is a [make and model] and I'm in [postcode].") }}
+{% endblock %}

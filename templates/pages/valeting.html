@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import package_cards, compare_table, faq_list, review_list, review_section, cta_band %}
+{% block main %}
+<section class="page-hero">
+  <div class="wrap page-hero-grid">
+    <div>
+      <p class="eyebrow">01 · Valeting</p>
+      <h1>Mobile car valeting</h1>
+      <p class="lede">Three valets at published prices, carried out on your drive or at your workplace across North Leeds. Every valet includes a hand wash and finishes with a hydrophobic rinse coating.</p>
+      <p>Covering {{ site.area_summary }}. <a href="/areas/">See all areas</a>.</p>
+      <p class="fact-line">Mini £40 · Full £65 · Platinum £110 · Open 7 days</p>
+      <p>{{ confirm("are these prices the same for every car, or do 4x4s and 7-seaters cost more?") }} Vans and motorhomes are quoted individually.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/contact/" data-track="quote_cta" data-label="valeting_hero">Get a quote</a>
+        <a class="btn btn-whatsapp" href="{{ wa("Hi, I'd like a valet quote for my [make and model]. I'm in [postcode].") }}" data-track="whatsapp_click" data-label="valeting_hero">Send photos on WhatsApp</a>
+      </div>
+    </div>
+    <div>{{ photo("valeting-hero", "Blue Bentley Bentayga after a valet, on a customer's gravel drive", ratio="4 / 3", eager=True) }}</div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="choose-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="choose-h">Choose your valet</h2>
+      <p>Each valet includes everything in the one before it.</p>
+    </div>
+    {{ package_cards() }}
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="which-h">
+  <div class="wrap narrow">
+    <h2 id="which-h">Which valet does your car need?</h2>
+    <ul class="choose">
+      <li><a href="/valeting/mini-valet/"><span class="choose-q">It's cleaned regularly and just needs freshening up.</span><span class="choose-a">Mini Valet</span></a></li>
+      <li><a href="/valeting/full-valet/"><span class="choose-q">The seats or carpets are marked, the boot is grubby, or it's going back to the leasing company.</span><span class="choose-a">Full Valet</span></a></li>
+      <li><a href="/valeting/platinum-valet/"><span class="choose-q">It needs everything: leather seats, the roof lining, the arches.</span><span class="choose-a">Platinum Valet</span></a></li>
+    </ul>
+    <p class="photo-prompt"><strong>Still not sure?</strong> Send two or three photos of the seats, carpets and outside on WhatsApp. We'll tell you which valet it needs before you book.
+      <a class="btn btn-whatsapp" href="{{ wa("Hi, I'm not sure which valet my car needs. I'll send some photos. My car is a [make and model] and I'm in [postcode].") }}" data-track="whatsapp_click" data-label="valeting_which">Send photos on WhatsApp</a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="compare-h">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="compare-h">Compare all three valets</h2>
+    </div>
+    {{ compare_table() }}
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="how-h">
+  <div class="wrap narrow">
+    <h2 id="how-h">How a mobile valet works</h2>
+    <ol class="steps steps-numbered">
+      <li><strong>Get in touch</strong> Use the <a href="/contact/">quote form</a>, WhatsApp or call {{ site.phone_display }}. Tell us the car, your postcode and the valet you want.</li>
+      <li><strong>Pick a time</strong> We work Monday to Saturday 8am to 6pm, and Sunday 8am to 1pm.</li>
+      <li><strong>We come to you</strong> We can bring our own water and power, so all we need is space to work around the car. You don't need to be home.</li>
+      <li><strong>Check it over</strong> If you're home, Connor walks round the car with you when it's finished. Pay by card, cash or bank transfer.</li>
+    </ol>
+    <h3>Where we can valet your car</h3>
+    <p>On your drive, outside your house, or in your workplace car park. {{ confirm("any limits, e.g. roadside parking, flats, underground car parks, needing the employer's permission") }}</p>
+  </div>
+</section>
+
+{{ review_section(reviews_for("full","mini", limit=3), "What valeting customers say") }}
+
+<section class="section section-alt" aria-labelledby="vip-h">
+  <div class="wrap narrow">
+    <h2 id="vip-h">Keep it that way with Rebel VIP</h2>
+    <p>Once your car has been brought up to standard, Rebel VIP keeps it there with fortnightly or monthly valets. Your first clean is charged at the Full Valet price, then it's £35 a visit. {{ confirm("what each VIP visit includes") }}</p>
+    <a class="btn btn-primary" href="/vip/" data-track="vip_cta" data-label="valeting">Find out about Rebel VIP</a>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-h">
+  <div class="wrap narrow">
+    <h2 id="faq-h">Valeting questions</h2>
+    {{ faq_list(faqs_for("valeting")) }}
+  </div>
+</section>
+
+{{ cta_band("Ready to book a valet?", "Tell us the car and your postcode, and we'll confirm the price and a time.") }}
+{% endblock %}

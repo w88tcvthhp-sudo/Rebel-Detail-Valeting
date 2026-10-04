@@ -1,0 +1,140 @@
+{
+  "_note": "Single source of truth for business facts. Anything with confirmed:false is never published in schema or sameAs.",
+  "name": "Rebel Detail & Valeting",
+  "short_name": "Rebel",
+  "url": "https://rebelvalet.co.uk",
+  "phone_display": "07469 184950",
+  "phone_e164": "+447469184950",
+  "whatsapp": "447469184950",
+  "email": "rebelvalet@gmail.com",
+  "owner": "Connor",
+  "base_area": "North Leeds",
+  "trading_entity": "[[CONFIRM: trading name and legal entity, e.g. sole trader or registered company with number]]",
+  "hours": [
+    {
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "label": "Mon to Sat",
+      "opens": "08:00",
+      "closes": "18:00",
+      "display": "8am to 6pm"
+    },
+    {
+      "days": [
+        "Sunday"
+      ],
+      "label": "Sunday",
+      "opens": "08:00",
+      "closes": "13:00",
+      "display": "8am to 1pm"
+    }
+  ],
+  "price_range": "£40–£110",
+  "google_rating": null,
+  "google_review_count": null,
+  "_rating_note": "Set google_rating and google_review_count from the live Google Business Profile, and update them when they change. While null, the site shows a plain 'Read our Google reviews' link instead.",
+  "google_reviews_url": "https://share.google/0LMQvEsMbe9gpmUYd",
+  "social": [
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/Rebeldetail/",
+      "confirmed": true
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/rebelvalet/",
+      "confirmed": false
+    }
+  ],
+  "towns": [
+    "Adel",
+    "Arthington",
+    "Bramhope",
+    "Cookridge",
+    "Horsforth",
+    "Meanwood",
+    "Moortown",
+    "Seacroft",
+    "Shadwell",
+    "Guiseley",
+    "Hawksworth",
+    "Rawdon",
+    "Yeadon",
+    "Baildon",
+    "Idle",
+    "Shipley",
+    "Thackley",
+    "Harrogate",
+    "Knaresborough"
+  ],
+  "_towns_note": "Add confirmed towns as plain strings, e.g. [\"Yeadon\", \"Rawdon\"]. Leave empty until Connor confirms coverage.",
+  "ga_id": "",
+  "_ga_note": "Add a GA4 measurement ID (G-XXXXXXX) to enable analytics. The consent banner only appears when this is set.",
+  "confirmed_sources": [
+    "Van livery (photo IMG_9380): 'Mobile valeting service', Mini valets, Full valets, Ceramic coatings, 07469 184950, rebelvalet.co.uk, rebelvalet@gmail.com",
+    "Rebel Facebook post, 17 Mar: Ford Puma ceramic coating package; coating offers up to 24 months of protection"
+  ],
+  "ceramic_durability": "up to 24 months",
+  "areas": [
+    {
+      "name": "North and North West Leeds",
+      "towns": [
+        "Adel",
+        "Arthington",
+        "Bramhope",
+        "Cookridge",
+        "Horsforth",
+        "Meanwood",
+        "Moortown"
+      ]
+    },
+    {
+      "name": "North East Leeds",
+      "towns": [
+        "Seacroft",
+        "Shadwell"
+      ]
+    },
+    {
+      "name": "Aireborough",
+      "towns": [
+        "Guiseley",
+        "Hawksworth",
+        "Rawdon",
+        "Yeadon"
+      ]
+    },
+    {
+      "name": "Shipley and Baildon",
+      "towns": [
+        "Baildon",
+        "Idle",
+        "Shipley",
+        "Thackley"
+      ]
+    },
+    {
+      "name": "Harrogate and Knaresborough",
+      "towns": [
+        "Harrogate",
+        "Knaresborough"
+      ]
+    }
+  ],
+  "area_summary": "North Leeds, Aireborough, Shipley and Baildon, and Harrogate and Knaresborough",
+  "payment_methods": "card, cash or bank transfer",
+  "reply_time": "within 24 to 48 hours",
+  "vehicles": "cars, vans and motorhomes",
+  "vip": {
+    "first_clean": "Full Valet price (£65)",
+    "per_visit": 35,
+    "frequency": "fortnightly or monthly"
+  },
+  "_answers_2026_10_04": "Answers from Connor via Jason: areas list; own water and power; card/cash/bank transfer; VIP £35 per visit after first clean, fortnightly or monthly; family run, started as a hobby; Connor does every job; reply 24-48h; works in light rain; customer need not be home; remove rubbish and personal items; child seats cleaned on request; walk-round handover; cars, vans, motorhomes; seats shampooed and extracted; leather cleaned in Full; heavy pet hair/very dirty costs extra; seats dry in about 24h; Full removes smells; stains pointed out before starting."
+}

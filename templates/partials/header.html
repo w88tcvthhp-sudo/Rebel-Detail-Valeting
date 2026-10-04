@@ -1,0 +1,45 @@
+{% set nav = [
+  ("Valeting", "/valeting/", [("Mini Valet", "/valeting/mini-valet/"), ("Full Valet", "/valeting/full-valet/"), ("Platinum Valet", "/valeting/platinum-valet/")]),
+  ("Detailing", "/detailing/", []),
+  ("Correction", "/detailing/machine-polishing/", []),
+  ("Protection", "/detailing/ceramic-coating/", []),
+  ("VIP", "/vip/", []),
+  ("Our work", "/our-work/", []),
+  ("About", "/about/", []),
+] %}
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      {% if logo %}<picture><source type="image/webp" srcset="/assets/img/logo-h112.webp"><img src="/assets/img/logo-h112.png" alt="{{ site.name }}" width="151" height="112"></picture>
+      {% else %}<span class="brand-word">Rebel</span><span class="brand-sub">Detail &amp; Valeting</span>{% endif %}
+    </a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main">
+      <ul class="nav-list">
+        {% for label, url, children in nav %}
+        <li>
+          <a href="{{ url }}"{% if page.url == url or (url == "/valeting/" and page.url.startswith(url)) %} aria-current="{{ 'page' if page.url == url else 'true' }}"{% endif %}>{{ label }}</a>
+          {% if children %}
+          <ul class="nav-sub">
+            {% for clabel, curl in children %}<li><a href="{{ curl }}"{% if page.url == curl %} aria-current="page"{% endif %}>{{ clabel }}</a></li>{% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+        <li class="nav-extra"><a href="/reviews/">Reviews</a></li>
+        <li class="nav-extra"><a href="/areas/">Areas we cover</a></li>
+        <li class="nav-extra"><a href="/faq/">FAQ</a></li>
+      </ul>
+      <div class="nav-contact">
+        <a class="btn btn-primary" href="/contact/" data-track="quote_cta" data-label="nav_mobile">Get a quote</a>
+        <a class="btn btn-outline-light" href="tel:{{ site.phone_e164 }}" data-track="phone_click" data-label="nav_mobile">Call {{ site.phone_display }}</a>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <a class="header-phone" href="tel:{{ site.phone_e164 }}" data-track="phone_click" data-label="header">{{ site.phone_display }}</a>
+      <a class="btn btn-primary btn-sm header-quote" href="/contact/" data-track="quote_cta" data-label="header">Get a quote</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="nav-toggle-text">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>

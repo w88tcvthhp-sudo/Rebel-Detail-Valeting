@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="page-hero page-hero-tight"><div class="wrap narrow"><h1>Booking terms</h1>
+<p>{{ confirm("every section below must be written from Rebel's actual policies before launch. Nothing here should be guessed.") }}</p></div></section>
+<section class="section section-tight"><div class="wrap narrow prose">
+<h2>Prices</h2>
+<p>Valet prices are published on the <a href="/valeting/">valeting page</a>. {{ confirm("whether prices vary by vehicle size or condition, and how that's agreed before work starts") }}</p>
+<h2>Payment</h2>
+<p>We take card, cash or bank transfer. {{ confirm("when payment is taken, and whether a deposit is needed") }}</p>
+<h2>Cancelling or rearranging</h2>
+<p>{{ confirm("notice needed, and any charge for late cancellation or no access to the car") }}</p>
+<h2>Bad weather</h2>
+<p>Light rain doesn't stop us working. {{ confirm("what happens if the weather is too bad to work") }}</p>
+<h2>On the day</h2>
+<p>You don't need to be home, but we need access to the car. We can bring our own water and power. Please remove rubbish and personal items before we arrive. Child seats are cleaned on request.</p>
+<h2>Stains, damage and expectations</h2>
+<p>We'll point out any stain that's unlikely to come out before we start. Some stains and defects may fade rather than disappear completely. {{ confirm("how pre-existing damage is recorded and handled") }}</p>
+<h2>If you're not happy</h2>
+<p>{{ confirm("how to raise a concern and how quickly") }}</p>
+<h2>Rebel VIP</h2>
+<p>The first clean is charged at the Full Valet price, then £35 a visit, fortnightly or monthly. {{ confirm("minimum term, notice to cancel, pausing") }}</p>
+</div></section>
+{% endblock %}

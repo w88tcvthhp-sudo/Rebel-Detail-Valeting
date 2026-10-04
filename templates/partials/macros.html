@@ -1,0 +1,136 @@
+{% macro package_cards(heading_level=3) %}
+<div class="price-board">
+  {% for p in packages %}
+  <article class="price-col" aria-labelledby="pkg-{{ p.id }}">
+    <header class="price-head">
+      <h{{ heading_level }} id="pkg-{{ p.id }}" class="price-name">{{ p.name }}</h{{ heading_level }}>
+      <p class="price-figure"><span class="price-amount">£{{ p.price }}</span> <span class="price-time">{{ p.time }}</span></p>
+    </header>
+    <p class="price-for">{{ p.card_for }}</p>
+    {% if p.card_intro %}<p class="price-intro">{{ p.card_intro }}</p>{% endif %}
+    <ul class="ticks">
+      {% for item in p.card_points %}<li>{{ item }}</li>{% endfor %}
+    </ul>
+    <div class="price-actions">
+      <a class="btn btn-primary" href="/contact/?service={{ p.id }}" data-track="package_select" data-label="{{ p.id }}">Book a {{ p.name }}</a>
+      <a class="text-link" href="/valeting/{{ p.slug }}/">What's in the {{ p.short }}</a>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+{% endmacro %}
+
+{% macro compare_table() %}
+<div class="compare" id="compare">
+  <fieldset class="compare-switch">
+    <legend>Show package</legend>
+    {% for p in packages %}
+    <input type="radio" name="compare-pkg" id="cmp-{{ p.id }}" value="{{ p.id }}"{% if loop.first %} checked{% endif %}>
+    <label for="cmp-{{ p.id }}">{{ p.short }} <span>£{{ p.price }}</span></label>
+    {% endfor %}
+  </fieldset>
+  <div class="compare-scroll">
+    <table class="compare-table">
+      <caption>What's included in each valet</caption>
+      <thead>
+        <tr>
+          <td></td>
+          {% for p in packages %}<th scope="col" class="col-{{ p.id }}">{{ p.name }}<span>£{{ p.price }} · {{ p.time_short }}</span></th>{% endfor %}
+        </tr>
+      </thead>
+      {% for g in groups %}
+      <tbody>
+        <tr class="compare-group"><th scope="rowgroup" colspan="{{ packages|length + 1 }}">{{ g }}</th></tr>
+        {% for f in features if f.group == g %}
+        <tr>
+          <th scope="row">{{ f.compare }}</th>
+          {% for p in packages %}
+          <td class="col-{{ p.id }}">
+            {% if p.id in f.list %}
+              {% if f.get("cell") and f.cell[p.id] != "Included" %}<span class="cell-detail">{{ f.cell[p.id] }}</span>
+              {% else %}<span class="yes" aria-hidden="true">✓</span><span class="cell-label">Included</span>{% endif %}
+            {% else %}<span class="no" aria-hidden="true">—</span><span class="cell-label">Not included</span>{% endif %}
+          </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+      {% endfor %}
+      <tfoot>
+        <tr>
+          <td></td>
+          {% for p in packages %}<td class="col-{{ p.id }}"><a class="btn btn-primary btn-sm" href="/contact/?service={{ p.id }}" data-track="package_select" data-label="{{ p.id }}_compare">Book {{ p.short }}</a></td>{% endfor %}
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro faq_list(items, heading_level=3) %}
+<div class="faq-list">
+  {% for f in items %}
+  <details class="faq">
+    <summary><h{{ heading_level }}>{{ f.q }}</h{{ heading_level }}></summary>
+    <div class="faq-answer"><p>{{ f.a|rich }}</p></div>
+  </details>
+  {% endfor %}
+</div>
+{% endmacro %}
+
+{% macro review_list(items, empty_note="") %}
+{% if items %}
+<div class="reviews">
+  {% for r in items %}
+  <article class="review">
+    {% if r.get("rating") %}
+    <p class="review-stars" role="img" aria-label="{{ r.rating }} out of 5 stars">{% for i in range(5) %}<span{% if i >= r.rating %} class="off"{% endif %} aria-hidden="true">★</span>{% endfor %}</p>
+    {% else %}
+    <p class="review-rec"><span aria-hidden="true">✓</span> Recommends Rebel</p>
+    {% endif %}
+    <p class="review-name">{{ r.name }}</p>
+    <p class="review-meta">{{ r.source }} · {{ r.display_date }}</p>
+    <blockquote class="review-text"><p>{{ r.text }}</p></blockquote>
+  </article>
+  {% endfor %}
+</div>
+{% else %}
+<p class="reviews-empty">{{ confirm(empty_note or "add 2–3 genuine reviews to data/reviews.json") }}</p>
+{% endif %}
+{% endmacro %}
+
+{% macro cta_band(heading, text, primary=("Get a quote", "/contact/"), whatsapp_text="Hi, I'd like a quote for my car.") %}
+<section class="cta-band" aria-labelledby="cta-{{ heading|lower|replace(' ', '-')|replace('?', '') }}">
+  <div class="wrap cta-inner">
+    <div>
+      <h2 id="cta-{{ heading|lower|replace(' ', '-')|replace('?', '') }}">{{ heading }}</h2>
+      <p>{{ text }}</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="{{ primary[1] }}" data-track="quote_cta" data-label="cta_band">{{ primary[0] }}</a>
+      <a class="btn btn-outline-light" href="{{ wa(whatsapp_text) }}" data-track="whatsapp_click" data-label="cta_band">WhatsApp Rebel</a>
+      <a class="cta-phone" href="tel:{{ site.phone_e164 }}" data-track="phone_click" data-label="cta_band">or call {{ site.phone_display }}</a>
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro review_section(items, heading="What customers say", hid="reviews-h", alt=False) %}
+<section class="section{% if alt %} section-alt{% endif %}" aria-labelledby="{{ hid }}">
+  <div class="wrap">
+    <div class="section-head section-head-row">
+      <div><p class="eyebrow">Reviews</p><h2 id="{{ hid }}">{{ heading }}</h2></div>
+      <a class="text-link" href="/reviews/">Read all {{ fb_count }} reviews</a>
+    </div>
+    {{ review_list(items) }}
+  </div>
+</section>
+{% endmacro %}
+
+{% macro rating_line() %}
+{% if site.google_rating and site.google_review_count %}
+<a class="rating" href="{{ site.google_reviews_url }}" rel="noopener"><span aria-hidden="true">★</span> {{ site.google_rating }} from {{ site.google_review_count }} Google reviews</a>
+{% else %}
+<a class="rating" href="/reviews/">{{ fb_count }} reviews from customers on Facebook</a>
+{% endif %}
+{% endmacro %}

@@ -1,0 +1,481 @@
+{
+  "order": [
+    "mini",
+    "full",
+    "platinum"
+  ],
+  "packages": {
+    "mini": {
+      "name": "Mini Valet",
+      "short": "Mini",
+      "slug": "mini-valet",
+      "price": 40,
+      "time": "About 2 hours",
+      "time_short": "2 hours",
+      "card_for": "For new or well-kept cars that need a proper clean inside and out.",
+      "card_points": [
+        "Citrus pre-wash, snow foam and hand wash",
+        "Wheels, door shuts and fuel cap cleaned",
+        "Tyres dressed",
+        "Hydrophobic rinse coating",
+        "Interior vacuumed, including mats and boot",
+        "Dashboard, steering wheel, plastics and glass cleaned"
+      ],
+      "card_intro": "",
+      "title": "Mini Valet £40, Mobile in North Leeds | Rebel",
+      "description": "A maintenance valet for new and well-kept cars: hand wash, wheels, door shuts, interior vacuum, dash and glass. About 2 hours, at your door.",
+      "summary": "The Mini Valet is our maintenance clean for cars that are already in decent shape. The outside gets a pre-wash, snow foam and a full hand wash, finished with a hydrophobic rinse coating. Inside, it's vacuumed and wiped down, so the car is clean and tidy without the time and cost of a shampoo.",
+      "for": [
+        "Newer cars, and cars that are cleaned regularly",
+        "A tidy-up between Full Valets",
+        "Cars on a regular cleaning schedule, including Rebel VIP members [[CONFIRM: are VIP maintenance visits based on the Mini Valet?]]"
+      ],
+      "not_for": "The Mini isn't the right choice if the seats or carpets are marked, there's heavy pet hair, or the car hasn't been cleaned in months. It doesn't shampoo fabrics, so the Full Valet will give you a better result.",
+      "not_included": [
+        "Seats, mats or carpets shampooed (Full Valet)",
+        "Boot deep clean, air vents, foot pedals and indicator stalks (Full Valet)",
+        "Leather cleaning and conditioning, roof lining, wheel arches and paint protection (Platinum Valet)",
+        "Removing swirls or scratches from paint (machine polishing)"
+      ],
+      "not_included_note": "Heavy pet hair or a very dirty interior can cost extra. Send us a photo and we'll confirm the price before you book.",
+      "extras": "[[CONFIRM: any add-ons that can be booked with a Mini Valet, with prices. If there are none, remove this section.]]",
+      "expect": [
+        "A clean, tidy car inside and out. The Mini removes everyday dirt, dust and grime. It won't lift stains from fabric seats or carpets, and it won't remove scratches from the paint. If you can see marks on the seats, the Full Valet is the one to book."
+      ],
+      "photos": [
+        {
+          "slot": "mini-hero",
+          "alt": "Mini John Cooper Works GP after a wash, on a driveway"
+        },
+        {
+          "slot": "mini-ba",
+          "before": "Aston Martin DBX alloy wheel and tyre covered in road dirt",
+          "after": "The same wheel and tyre after cleaning",
+          "caption": "Wheels and tyres"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is the car washed by hand?",
+          "a": "Yes. Every Mini Valet includes a citrus pre-wash and snow foam to lift the worst of the dirt, followed by a hand contact wash."
+        },
+        {
+          "q": "What is the hydrophobic rinse coating?",
+          "a": "It's applied as part of the final rinse on every wash, and helps water run off the paint. [[CONFIRM: product used and how long the effect typically lasts.]]"
+        },
+        {
+          "q": "Can I book a Mini if the car hasn't been cleaned for a while?",
+          "a": "You can, but the Mini doesn't shampoo fabrics. For a car that's been let go, the Full Valet will give a much better result. Send us a few photos and we'll tell you which one it needs."
+        },
+        {
+          "q": "How often should I book one?",
+          "a": "It depends on how the car is used. If you'd like it done on a schedule, <a href=\"/vip/\">Rebel VIP</a> covers fortnightly or monthly visits."
+        }
+      ]
+    },
+    "full": {
+      "name": "Full Valet",
+      "short": "Full",
+      "slug": "full-valet",
+      "price": 65,
+      "time": "About 3 hours",
+      "time_short": "3 hours",
+      "card_for": "For cars that have been let go for a while, or are going back at the end of a lease.",
+      "card_intro": "Everything in the Mini, plus:",
+      "card_points": [
+        "Seats shampooed and extracted (leather cleaned)",
+        "Mats and carpets shampooed",
+        "Boot deep cleaned",
+        "Dashboard cleaned, including air vents",
+        "Foot pedals and indicator stalks cleaned"
+      ],
+      "title": "Full Valet £65, Seats & Carpets Shampooed | Rebel",
+      "description": "Seats, mats and carpets shampooed, boot deep cleaned and a full hand wash. Suits neglected cars and lease returns. About 3 hours, at your door.",
+      "summary": "The Full Valet is for a car that needs resetting rather than tidying. It includes everything in the Mini Valet, then the seats, mats and carpets are shampooed and extracted (leather seats are cleaned), the boot is deep cleaned and the interior is cleaned down to the air vents and pedals. The outside gets the same pre-wash, snow foam, hand wash and hydrophobic rinse coating.",
+      "for": [
+        "Cars that haven't been properly cleaned for a while",
+        "Family cars with marked seats and carpets",
+        "Lease returns and cars being sold",
+        "Getting a car up to standard before joining Rebel VIP (the first VIP clean is charged at the Full Valet price)"
+      ],
+      "not_for": "",
+      "not_included": [
+        "Leather deep cleaning and reconditioning (Platinum Valet). The Full Valet cleans leather seats.",
+        "Roof lining (Platinum Valet)",
+        "Wheel arches (Platinum Valet)",
+        "Temporary paint protection (Platinum Valet)",
+        "Removing swirls or scratches from paint (machine polishing)"
+      ],
+      "not_included_note": "",
+      "extras": "",
+      "lease": "A Full Valet is a sensible step before a lease return or a sale. The interior is shampooed and the outside hand washed, so the car goes back clean. A valet is a cleaning service, though. It won't repair chips, dents, kerbed wheels or scratches, which leasing companies may assess separately. [[CONFIRM: how much notice you need before a return date.]]",
+      "expect": [
+        "Fabric seats, mats and carpets will be noticeably fresher, with everyday marks lifted and smells removed. Some stains, such as ink, dye transfer from clothing or marks that have been there for years, may fade rather than disappear completely. We'll point out any stain that's unlikely to come out before we start.",
+        "Shampooed fabrics will be damp when we finish. They usually take about 24 hours to dry, depending on the weather and temperature."
+      ],
+      "photos": [
+        {
+          "slot": "full-hero",
+          "alt": "Bentley Bentayga driver's footwell and carpet mat after cleaning"
+        },
+        {
+          "slot": "full-ba",
+          "before": "Fabric seat base covered in water marks and stains",
+          "after": "The same seat after cleaning, with the marks gone",
+          "caption": "Stained fabric seat"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How long do the seats take to dry?",
+          "a": "Usually about 24 hours, depending on the weather and temperature."
+        },
+        {
+          "q": "Will it get rid of dog hair?",
+          "a": "Yes. See the <a href=\"/our-work/#ford-mondeo\">Ford Mondeo in our work</a>. Heavy pet hair can cost extra, so send us a photo and we'll confirm the price first."
+        },
+        {
+          "q": "Will it remove smells?",
+          "a": "Yes. The shampoo and extraction removes smells from the seats, carpets and mats."
+        },
+        {
+          "q": "My car has leather seats. Do I need the Platinum?",
+          "a": "Not necessarily. The Full Valet cleans leather seats. The Platinum adds a deep clean and reconditioning, which suits leather that's starting to look dry or tired."
+        }
+      ]
+    },
+    "platinum": {
+      "name": "Platinum Valet",
+      "short": "Platinum",
+      "slug": "platinum-valet",
+      "price": 110,
+      "time": "About 4–6 hours",
+      "time_short": "4–6 hours",
+      "card_for": "For cars that need serious time spending on them to bring them back.",
+      "card_intro": "Everything in the Full, plus:",
+      "card_points": [
+        "Leather seats deep cleaned and reconditioned",
+        "Roof lining cleaned",
+        "Wheel arches cleaned",
+        "Temporary paint protection applied"
+      ],
+      "title": "Platinum Valet £110, Our Most Thorough Valet | Rebel",
+      "description": "Everything in the Full Valet, plus leather cleaned and reconditioned, roof lining, wheel arches and temporary paint protection. 4–6 hours, mobile.",
+      "summary": "The Platinum Valet is the most thorough valet we offer. It includes everything in the Full Valet, then adds the jobs that take real time: leather seats deep cleaned and reconditioned, the roof lining cleaned, the wheel arches cleaned, and temporary protection applied to the paint.",
+      "for": [
+        "Cars that need serious time spending on them to bring them back",
+        "Cars with leather interiors",
+        "Preparing a car for sale",
+        "Anyone who wants every part of the car cleaned in one visit"
+      ],
+      "not_for": "",
+      "not_included": [
+        "Removing swirls, haze or scratches from paint. This needs machine polishing.",
+        "Long-term paint protection. This needs a ceramic coating.",
+        "Repairs to damaged trim, torn upholstery or worn leather"
+      ],
+      "not_included_note": "",
+      "extras": "",
+      "expect": [
+        "The cleanest your car can be without working on the paint itself. Leather will be clean and conditioned. Roof linings are easily damaged, so they're cleaned with care, and some old marks may only fade. [[CONFIRM: how you approach roof linings and what customers should expect.]]",
+        "The paint will be clean, with a hydrophobic finish and a layer of temporary protection. Any swirls and scratches will still be there, and they often look clearer on clean paint. If that matters to you, ask about <a href=\"/detailing/machine-polishing/\">machine polishing</a>."
+      ],
+      "photos": [
+        {
+          "slot": "platinum-hero",
+          "alt": "Aston Martin DBX leather steering wheel after cleaning"
+        },
+        {
+          "slot": "platinum-ba",
+          "before": "Aston Martin DBX steering wheel and footwell before cleaning",
+          "after": "The same view after cleaning",
+          "caption": "Aston Martin DBX, steering wheel and footwell"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Why does it take 4–6 hours?",
+          "a": "The time depends on the size of the car and its condition. Leather, roof linings and wheel arches can't be rushed."
+        },
+        {
+          "q": "Is the Platinum the same as detailing?",
+          "a": "No. The Platinum is a very thorough clean and includes temporary protection, but it doesn't work on the paint itself. <a href=\"/detailing/\">Detailing</a> uses machine polishing to reduce defects and coatings to protect the finish."
+        },
+        {
+          "q": "What is the temporary paint protection?",
+          "a": "[[CONFIRM: product type and typical lifespan.]]"
+        },
+        {
+          "q": "Do I need a Platinum before joining Rebel VIP?",
+          "a": "No. The first VIP clean is charged at the Full Valet price. [[CONFIRM: can customers choose a Platinum as their first VIP clean if they want to?]]"
+        }
+      ]
+    }
+  },
+  "groups": [
+    "Exterior",
+    "Wheels & tyres",
+    "Interior"
+  ],
+  "features": [
+    {
+      "group": "Exterior",
+      "compare": "Citrus pre-wash and snow foam",
+      "list": {
+        "mini": [
+          "Citrus pre-wash to loosen road dirt",
+          "Snow foam soak"
+        ],
+        "full": [
+          "Citrus pre-wash to loosen road dirt",
+          "Snow foam soak"
+        ],
+        "platinum": [
+          "Citrus pre-wash to loosen road dirt",
+          "Snow foam soak"
+        ]
+      }
+    },
+    {
+      "group": "Exterior",
+      "compare": "Hand contact wash",
+      "list": {
+        "mini": [
+          "Hand contact wash"
+        ],
+        "full": [
+          "Hand contact wash"
+        ],
+        "platinum": [
+          "Hand contact wash"
+        ]
+      }
+    },
+    {
+      "group": "Exterior",
+      "compare": "Door shuts and fuel cap",
+      "list": {
+        "mini": [
+          "Door shuts cleaned",
+          "Fuel cap cleaned"
+        ],
+        "full": [
+          "Door shuts cleaned",
+          "Fuel cap cleaned"
+        ],
+        "platinum": [
+          "Door shuts cleaned",
+          "Fuel cap cleaned"
+        ]
+      }
+    },
+    {
+      "group": "Exterior",
+      "compare": "Hydrophobic rinse coating",
+      "list": {
+        "mini": [
+          "Hydrophobic rinse coating"
+        ],
+        "full": [
+          "Hydrophobic rinse coating"
+        ],
+        "platinum": [
+          "Hydrophobic rinse coating"
+        ]
+      }
+    },
+    {
+      "group": "Exterior",
+      "compare": "Temporary paint protection",
+      "list": {
+        "platinum": [
+          "Temporary paint protection applied"
+        ]
+      },
+      "note": {
+        "platinum": "[[CONFIRM: type, e.g. spray sealant or wax, and a realistic lifespan in weeks.]]"
+      }
+    },
+    {
+      "group": "Wheels & tyres",
+      "compare": "Wheels cleaned",
+      "list": {
+        "mini": [
+          "Wheels cleaned"
+        ],
+        "full": [
+          "Wheels cleaned"
+        ],
+        "platinum": [
+          "Wheels cleaned"
+        ]
+      }
+    },
+    {
+      "group": "Wheels & tyres",
+      "compare": "Wheel arches",
+      "list": {
+        "platinum": [
+          "Wheel arches cleaned"
+        ]
+      }
+    },
+    {
+      "group": "Wheels & tyres",
+      "compare": "Tyres dressed",
+      "list": {
+        "mini": [
+          "Tyres dressed"
+        ],
+        "full": [
+          "Tyres dressed"
+        ],
+        "platinum": [
+          "Tyres dressed"
+        ]
+      }
+    },
+    {
+      "group": "Interior",
+      "compare": "Vacuum, including mats and boot",
+      "list": {
+        "mini": [
+          "Vacuumed throughout, including mats and boot"
+        ],
+        "full": [
+          "Vacuumed throughout, including mats and boot"
+        ],
+        "platinum": [
+          "Vacuumed throughout, including mats and boot"
+        ]
+      }
+    },
+    {
+      "group": "Interior",
+      "compare": "Dashboard",
+      "cell": {
+        "mini": "Wiped down",
+        "full": "Incl. air vents",
+        "platinum": "Incl. air vents"
+      },
+      "list": {
+        "mini": [
+          "Dashboard wiped down"
+        ],
+        "full": [
+          "Dashboard cleaned, including air vents"
+        ],
+        "platinum": [
+          "Dashboard cleaned, including air vents"
+        ]
+      }
+    },
+    {
+      "group": "Interior",
+      "compare": "Steering wheel and plastics",
+      "cell": {
+        "mini": "Included",
+        "full": "Plus indicator stalks",
+        "platinum": "Plus indicator stalks"
+      },
+      "list": {
+        "mini": [
+          "Steering wheel and interior plastics cleaned"
+        ],
+        "full": [
+          "Steering wheel, indicator stalks and interior plastics cleaned"
+        ],
+        "platinum": [
+          "Steering wheel, indicator stalks and interior plastics cleaned"
+        ]
+      }
+    },
+    {
+      "group": "Interior",
+      "compare": "Windscreen and interior glass",
+      "list": {
+        "mini": [
+          "Windscreen and interior windows cleaned"
+        ],
+        "full": [
+          "Windscreen and interior windows cleaned"
+        ],
+        "platinum": [
+          "Windscreen and interior windows cleaned"
+        ]
+      }
+    },
+    {
+      "group": "Interior",
+      "compare": "Foot pedals",
+      "list": {
+        "full": [
+          "Foot pedals cleaned"
+        ],
+        "platinum": [
+          "Foot pedals cleaned"
+        ]
+      }
+    },
+    {
+      "group": "Interior",
+      "compare": "Seats cleaned",
+      "list": {
+        "full": [
+          "Fabric seats shampooed and extracted, or leather seats cleaned"
+        ],
+        "platinum": [
+          "Fabric seats shampooed and extracted"
+        ]
+      },
+      "cell": {
+        "full": "Fabric shampooed and extracted, or leather cleaned",
+        "platinum": "Plus leather reconditioned"
+      }
+    },
+    {
+      "group": "Interior",
+      "compare": "Mats and carpets shampooed",
+      "list": {
+        "full": [
+          "Mats shampooed",
+          "Carpets shampooed"
+        ],
+        "platinum": [
+          "Mats shampooed",
+          "Carpets shampooed"
+        ]
+      }
+    },
+    {
+      "group": "Interior",
+      "compare": "Boot deep cleaned",
+      "list": {
+        "full": [
+          "Boot deep cleaned"
+        ],
+        "platinum": [
+          "Boot deep cleaned"
+        ]
+      }
+    },
+    {
+      "group": "Interior",
+      "compare": "Leather deep cleaned and reconditioned",
+      "list": {
+        "platinum": [
+          "Leather seats deep cleaned and reconditioned"
+        ]
+      }
+    },
+    {
+      "group": "Interior",
+      "compare": "Roof lining",
+      "list": {
+        "platinum": [
+          "Roof lining cleaned"
+        ]
+      }
+    }
+  ]
+}

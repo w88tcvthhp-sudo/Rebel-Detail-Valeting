@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="page-hero page-hero-tight"><div class="wrap narrow"><h1>Cookie policy</h1></div></section>
+<section class="section section-tight"><div class="wrap narrow prose">
+{% if site.ga_id %}
+<h2>Analytics cookies</h2>
+<p>With your permission, we use Google Analytics to understand how people use this website, such as which pages are visited and how many people ask for a quote. Google Analytics sets cookies named <code>_ga</code> and <code>_ga_*</code>, which last up to two years. These are only set if you choose "Accept" on the cookie banner.</p>
+<p>You can change your choice at any time: <button class="link-button" type="button" data-cookie-reset>change cookie settings</button>.</p>
+<h2>Essential storage</h2>
+<p>We store your cookie choice in your browser so we don't ask again on every page.</p>
+{% else %}
+<h2>This website doesn't use tracking cookies</h2>
+<p>We don't use analytics, advertising or social media cookies. If that changes, we'll ask for your permission first and update this page.</p>
+{% endif %}
+<h2>Links to other sites</h2>
+<p>Links to WhatsApp, Google and Facebook take you to those services, which have their own cookie and privacy policies.</p>
+</div></section>
+{% endblock %}

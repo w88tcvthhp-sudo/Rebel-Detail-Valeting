@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import review_section, cta_band %}
+{% block main %}
+<section class="page-hero">
+  <div class="wrap page-hero-grid">
+    <div>
+      <p class="eyebrow">02 · Detailing</p>
+      <h1>Car detailing</h1>
+      <p class="lede">A valet removes dirt. Detailing works on the paint itself: machine polishing to reduce swirls and light scratches, and coatings to protect the finish once it's right.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/contact/?service=detailing" data-track="quote_cta" data-label="detailing_hero">Ask about detailing</a>
+        <a class="btn btn-whatsapp" href="{{ wa("Hi, I'd like a detailing quote. I'll send some photos of the paint. My car is a [make and model] and I'm in [postcode].") }}" data-track="whatsapp_click" data-label="detailing_hero">Send photos of your paint</a>
+      </div>
+    </div>
+    <div>{{ photo("pillar-detailing", "Rear quarter and wheel of a grey Aston Martin Vantage, showing the gloss on the paint", ratio="4 / 3", eager=True) }}</div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="diff-h">
+  <div class="wrap">
+    <h2 id="diff-h">Valeting or detailing?</h2>
+    <div class="compare-two">
+      <div>
+        <h3>A valet</h3>
+        <ul class="ticks">
+          <li>Cleans the car inside and out</li>
+          <li>Removes dirt, grime and everyday marks</li>
+          <li>Takes 2 to 6 hours, depending on the package</li>
+          <li>From £40, at published prices</li>
+        </ul>
+        <a class="text-link" href="/valeting/">Valet prices</a>
+      </div>
+      <div>
+        <h3>Detailing</h3>
+        <ul class="ticks">
+          <li>Machine polishes the paint to reduce swirls, haze and light scratches</li>
+          <li>Protects the finish with a coating that lasts far longer than a wax</li>
+          <li>{{ confirm("typical time, e.g. a full day or more") }}</li>
+          <li>{{ confirm("from-prices, or 'priced by quote after seeing the paint'") }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="signs-h">
+  <div class="wrap narrow">
+    <h2 id="signs-h">Signs your car would benefit from detailing</h2>
+    <ul class="ticks">
+      <li>Fine circular scratches (swirl marks) show up in sunlight or under street lights</li>
+      <li>The paint looks flat or hazy even straight after a wash</li>
+      <li>Light scratches catch the light but don't catch your fingernail</li>
+      <li>You've just bought a car and want to protect the paint from the start</li>
+    </ul>
+    <p>If your fingernail catches in a scratch, it has probably gone through the clear coat. Polishing can soften how it looks but won't remove it.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="svc-h">
+  <div class="wrap">
+    <h2 id="svc-h">Detailing services</h2>
+    <ul class="link-cards link-cards-light">
+      <li><a href="/detailing/machine-polishing/"><span class="tile-bg">{{ photo("corr-stack", "Before and after: scratches across a blue Ford Fiesta bumper, then removed", sizes="(min-width: 48rem) 40vw, 100vw") }}</span><span class="link-card-title">Machine polishing &amp; paint correction</span><span>Levels the clear coat to reduce swirls, haze and light scratches.</span></a></li>
+      <li><a href="/detailing/ceramic-coating/"><span class="tile-bg">{{ photo("tile-ceramic", "White Ford Puma after a ceramic coating", sizes="(min-width: 48rem) 40vw, 100vw") }}</span><span class="link-card-title">Ceramic coating</span><span>A hard, water-repelling layer applied to prepared paint.</span></a></li>
+    </ul>
+    <p class="section-foot">Looking for a deep interior clean? The <a href="/valeting/platinum-valet/">Platinum Valet</a> covers leather, the roof lining and full shampooing.</p>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="mobile-h">
+  <div class="wrap narrow">
+    <h2 id="mobile-h">Detailing at your home</h2>
+    <p>Polishing and coating need dry conditions and a clean surface. {{ confirm("whether polishing and coating need a garage, carport or covered space, and how weather affects detailing bookings") }}</p>
+    <h3>Getting a detailing quote</h3>
+    <p>Send a few photos of the paint in daylight, plus a close-up of the worst area. A phone torch held at an angle shows swirls clearly. We'll tell you what polishing is likely to achieve before you book.</p>
+  </div>
+</section>
+
+{{ review_section(reviews_for("detailing"), "What detailing customers say", "proof-h") }}
+
+{{ cta_band("Ask about detailing", "Send a few photos of the paint and we'll tell you what it needs.", ("Ask about detailing", "/contact/?service=detailing"), "Hi, I'd like a detailing quote. I'll send some photos of the paint. My car is a [make and model] and I'm in [postcode].") }}
+{% endblock %}

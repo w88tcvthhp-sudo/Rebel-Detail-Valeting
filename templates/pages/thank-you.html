@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="page-hero">
+  <div class="wrap narrow">
+    <h1>Thanks, your request has been sent</h1>
+    <p class="lede">We'll be in touch to confirm the price and a time. We reply within 24 to 48 hours.</p>
+    <h2>Got photos?</h2>
+    <p>If you didn't attach any, sending a few on WhatsApp helps us quote accurately.</p>
+    <a class="btn btn-whatsapp" href="{{ wa("Hi, I've just sent a quote request. Here are some photos of my car.") }}" data-track="whatsapp_click" data-label="thank_you">Send photos on WhatsApp</a>
+    <p class="section-foot"><a class="text-link" href="/valeting/">Back to valet prices</a></p>
+  </div>
+</section>
+{% endblock %}

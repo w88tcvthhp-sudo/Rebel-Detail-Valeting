@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import review_section, cta_band %}
+{% block main %}
+<section class="page-hero">
+  <div class="wrap page-hero-grid">
+    <div>
+      <p class="eyebrow">About Rebel</p>
+      <h1>Meet Connor</h1>
+      <p class="lede">Rebel Detail &amp; Valeting is Connor's business. When you book, you're booking the person who'll be on your drive and working on your car.</p>
+    </div>
+    <div>{{ photo("connor-portrait", "Connor, who runs Rebel Detail & Valeting", ratio="4 / 5", sizes="(min-width: 60rem) 40vw, 100vw", eager=True) }}</div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap narrow prose">
+    <h2>How Rebel started</h2>
+    <p>Connor loves cleaning cars. Rebel started as a hobby, cleaning cars for friends and family, and grew into a full-time business. It's still family run. {{ confirm("optional: the year Rebel started. The old website said 2020.") }}</p>
+    <h2>How Connor works</h2>
+    <p>Connor does every job himself, so the person you speak to when you book is the person who turns up. He points out any stains or marks that are unlikely to come out before he starts. If you're at home, he walks round the car with you when it's finished.</p>
+    <h2>Insurance and training</h2>
+    <p>{{ confirm("insurance held (e.g. public liability) and any training or product certifications. Only include what can be evidenced.") }}</p>
+    <div class="about-photos">
+      {{ photo("rebel-van-rear", "Rear doors of Rebel's van: mobile valeting service, mini valets, full valets, ceramic coatings, with phone, website and email", sizes="(min-width: 60rem) 33vw, 100vw") }}
+      {{ photo("rebel-van", "Rebel's red Ford Transit Connect van with the Rebel Detail & Valeting logo", sizes="(min-width: 60rem) 33vw, 100vw") }}
+    </div>
+  </div>
+</section>
+{{ review_section(reviews_for("trust", "trade"), "Why customers trust Connor", "proof-h") }}
+
+{{ cta_band("Book Connor", "Tell us the car and your postcode, and he'll confirm the price and a time.") }}
+{% endblock %}
